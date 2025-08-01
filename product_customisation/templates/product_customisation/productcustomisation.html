@@ -1,0 +1,94 @@
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>productcustomisation</title>
+</head>
+<body>
+	<form method="post">
+        {% csrf_token %}
+		<table>
+            <tr>
+				<td>Amount Range</td>
+				<td><select name="amnt">
+					<option>---select---</option>
+					<option value="blw500">Below 500</option>
+					<option value="Abv500">Above 500</option>
+					<option value="abv1000">Above 1000</option>
+
+				</select></td>
+			</tr>
+
+			<tr>
+				<td>Cake Name</td>
+				<td><input type="text" name="prps">
+			</tr>
+			<tr>  
+          	 		<td>Wishes</td>
+				<td><input type="text" name="descrp">
+			</tr>	 
+			<tr>
+				<td>Flavour</td>
+				<td><select name="flvr">
+					<option>---select---</option>
+					<option value="Vanilla">Vanilla</option>
+					<option value="Choclate">Choclate</option>
+					<option value="Butterscotch">Butterscotch</option>
+					<option value="Strawberry">Strawberry</option>
+					<option value="Caramel">Caramel</option>
+					<option value="Tender cocunut">Tender cocunut</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Layer</td>
+				<td><select name="lyr">
+					<option>---select---</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+
+				</select></td>
+			</tr>
+			<tr>
+				<td>Shape</td>
+				<td><input type="text" name="dsgn"></td>
+			</tr>
+			<tr>
+				<td>Quantity</td>
+				<td><input type="text" name="Qnty"></td>
+			</tr>
+			<tr>  
+          	 		<td>Weight</td>
+				<td><input type="text" name="weit">
+			</tr>	 
+			<tr>
+				<td>Theme</td>
+				<td><input type="text" name="thme"></td>
+			</tr>
+			<tr>
+				<td>Topper</td>
+				<td><input type="text" name="tppr"></td>
+			</tr>
+			<tr>
+				<td>Details</td>
+				<td><input type="text" name="title"></td>
+			</tr>
+			<tr>
+				<td>Image</td>
+				<td><input type="file" name="img" value="Choose Image"></td>
+			</tr>
+{#			<tr>#}
+{#				<td><input type="submit" name="slct" value="Order"></td>#}
+{#			</tr>#}
+
+		</table>
+                <center><input type="submit" name="submit" value="submit" class="btn btn-outline-primary"></center>
+
+		
+	</form>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,24 @@
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>View Reply(Merchant)</h1>
+	<table border="1">
+		<tr>
+			<td>Complaint</td>
+			<td>Reply</td>
+			
+		</tr>
+        {% for i in r %}
+
+		<tr>
+			<td>{{ i.complaint }}</td>
+			<td>{{ i.reply }}</td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

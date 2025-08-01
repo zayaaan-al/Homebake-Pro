@@ -1,0 +1,43 @@
+{% extends 'temp/merchant_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Manage Normal Order</h1>
+	<table border="1">
+		<tr>
+			<td>User Name</td>
+			<td>Product</td>
+			<td>Quantity</td>
+			<td>Amount</td>
+			<td>Wishes</td>
+			<td>Weight</td>
+			<td>Shape</td>
+			<td>Status</td>
+		</tr>
+        {% for i in u %}
+		<tr>
+			<td>{{ i.user.name }}</td>
+			<td>{{ i.product.product_name }}</td>
+			<td>{{ i.quantity }}</td>
+			<td>{{ i.amount }}</td>
+			<td>{{ i.wishes }}</td>
+			<td>{{ i.weight }}</td>
+			<td>{{ i.shape }}</td>
+			<td>{{ i.status }}</td>
+			<td><a href="/normal_order/approve/{{ i.order_id }}">Approve</a></td>
+			<td><a href="/normal_order/reject/{{ i.order_id }}">Reject</a></td>
+		</tr>
+
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Normal Order</title>
+</head>
+<body>
+	<form method="post">
+        {% csrf_token %}
+		<table>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" name="name" value="{{ x. }}"></td>
+			</tr>
+			<tr>
+				<td>Quantity</td>
+				<td><input type="text" name="qnt"></td>
+			</tr>
+			<tr>
+				<td>Amount</td>
+				<td><input type="text" name="amt"></td>
+			</tr>
+			<tr>
+				<td>Wishes</td>
+				<td><input type="text" name="dsp"></td>
+			</tr>
+			<tr>
+				<td>Weight</td>
+				<td><input type="text" name="wegt"></td>
+			</tr>
+			<tr>
+				<td>Shape</td>
+				<td><input type="text" name="shp"></td>
+			</tr>
+			<tr>
+				<td><input type="Submit" name="sbt" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>View And Update Customised Order Status</h1>
+	<table border="1">
+		<tr>
+			<td>Product Name</td>
+			<td>Quantity</td>
+			<td>Price</td>
+			<td>Status</td>
+		</tr>
+        {% for i in r %}
+		<tr>
+			<td>{{ i.cake_name}}</td>
+			<td>{{ i.quantity }}</td>
+			<td>{{ i.amount }}</td>
+			<td>{{ i.status }}</td>
+			<td><a href="/product_customisation/uptcststs/{{ i.product_customisation_id }}">Update</a></td>
+			
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

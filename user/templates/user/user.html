@@ -1,0 +1,50 @@
+{% extends 'temp/home_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user</title>
+</head>
+<body>
+	<form method="post">
+        {% csrf_token %}
+                <center><h1>Register</h1></center>
+        <br>
+
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="Name"></td>
+			</tr>
+			<tr>
+				<td>Phone no</td>
+				<td><input type="text" name="phn"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><textarea name="adrs" rows="6" cols="21"></textarea></textarea></td>
+			</tr>
+            <tr>
+				<td>Location</td>
+				<td><textarea name="lcn" rows="6" cols="21"></textarea></textarea></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="Email" name="email"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="Password" name="pswrd"></td>
+			</tr>
+{#			<tr>#}
+{#				<td><input type="Submit" name="Submit" value="Submit" class="btn btn-outline-primary"></td>#}
+{#			</tr>#}
+		</table>
+                <center><input type="submit" name="submit" value="submit" class="btn btn-outline-primary"></center>
+
+	</form>
+
+
+</body>
+</html>
+{% endblock %}

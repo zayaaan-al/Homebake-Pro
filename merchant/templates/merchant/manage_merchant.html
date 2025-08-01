@@ -1,0 +1,40 @@
+{% extends 'temp/admin_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Manage Merchant</h1>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Phone number</th>
+			<th>Address</th>
+			<th>Email</th>
+			<th>Location</th>
+			<th>Registration Fee</th>
+			<th>Status</th>
+		</tr>
+        {% for i in u %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.phone_number }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.email }}</td>
+			<td>{{ i.location }}</td>
+			<td>{{ i.registration.amount }}</td>
+			<td>{{i.status }}</td>
+			<td><button class="btn-outline-primary" ><a href="/merchant/accept/{{ i.merchant_id }}">Accept</a></button>
+            <button class="btn-outline-secondary"><a href="/merchant/reject/{{ i.merchant_id }}">Reject</a></button></td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

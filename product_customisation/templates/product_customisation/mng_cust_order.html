@@ -1,0 +1,51 @@
+{% extends 'temp/merchant_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Manage Customised Order</h1>
+	<table border="1">
+		<tr>
+{#			<td>User Name</td>#}
+			<td>Cake Name</td>
+			<td>Wishes</td>
+			<td>Flavour</td>
+			<td>Layer</td>
+			<td>Quantity</td>
+			<td>Shape</td>
+			<td>Theme</td>
+			<td>Topper</td>
+			<td>Details</td>
+			<td>Image</td>
+			<td>Status</td>
+			
+		</tr>
+        {% for i in e %}
+		<tr>
+{#			<td>{{ i.user_id }}</td>#}
+			<td>{{ i.cake_name }}</td>
+			<td>{{ i.wishes }}</td>
+			<td>{{ i.flavour }}</td>
+			<td>{{ i.layer }}</td>
+			<td>{{ i.quantity }}</td>
+			<td>{{ i.shape }}</td>
+			<td>{{ i.theme }}</td>
+			<td>{{ i.topper }}</td>
+			<td>{{ i.details }}</td>
+			<td>{{ i.image }}</td>
+			<td>{{ i.status }}</td>
+			<td><a href="/product_customisation/approve/{{ i.product_customisation_id }}">Approve</a></td>
+			<td><a href="/product_customisation/reject/{{ i.product_customisation_id }}">Reject</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

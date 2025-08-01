@@ -1,0 +1,41 @@
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>View Product And Order</h1>
+	<table border="1">
+		<tr>
+			<td>Product Name</td>
+			<td>Price</td>
+			<td>Quantity</td>
+			<td>Image</td>
+			<td>Offer</td>
+			<td>Ingredients</td>
+			<td>Rating</td>
+		</tr>
+        {% for i in w %}
+		<tr>
+			<td>{{ i.product_name }}</td>
+			<td>{{ i.price }}</td>
+			<td>{{ i.quantity }}</td>
+			<td><img src="/static/{{ i.image }}" width="100px" height="100px"></td>
+			<td>{{ i.offer }}</td>
+			<td>{{ i.ingredients }}</td>
+			<td>⭐⭐⭐⭐⭐</td>
+			<td><a href="/normal_order/nrmlordr/{{ i.product_id }}">Normal Order</a></td>
+			<td><a href="/product_customisation/product_customisation/{{ i.product_id }}">Customised Order</a></td>
+			
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'temp/merchant_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Merchant View Review</h1>
+	<table border="1">
+		<tr>
+			<td>Text</td>
+			<td>Rating</td>
+			
+		</tr>
+        {% for i in g %}
+		<tr>
+			<td>{{ i.text }}</td>
+			<td>{{ i.rating }}</td>
+			
+		</tr>
+        {% endfor%}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

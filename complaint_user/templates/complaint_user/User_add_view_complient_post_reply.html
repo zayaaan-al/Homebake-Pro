@@ -1,0 +1,37 @@
+{% extends 'temp/admin_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Add View Complaint Post Reply(User)</h1>
+	<table border="1">
+		<tr>
+			<td>Complaint</td>
+			
+			<td>Date</td>
+			<td>Time</td>
+			<td>Reply</td>
+			
+		</tr>
+        {% for i in t %}
+		<tr>
+			<td>{{ i.complaint }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+            <td>{{ i.reply }}</td>
+			<td><a href="/complaint_user/usrrly/{{ i.complaint_id }}">Reply</a></td>
+
+
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

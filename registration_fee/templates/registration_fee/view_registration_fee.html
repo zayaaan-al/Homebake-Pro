@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Vew Registration Fee</h1>
+	<table border="1">
+		<tr>
+			<td>Merchant Name</td>
+			<td>Amount</td>
+			
+		</tr>
+        {% for i in f %}
+		<tr>
+			<td>{{ i.merchant_id }}</td>
+			<td>{{ i.amount }}</td>
+			
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

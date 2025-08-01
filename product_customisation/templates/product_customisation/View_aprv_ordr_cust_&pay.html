@@ -1,0 +1,34 @@
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>View Approved Order Customisation And Payment</h1>
+	<table border="1">
+		<tr>
+			
+			<td>Product Name</td>
+			<td>Quantity</td>
+			<td>Price</td>
+			<td>Status</td>
+		</tr>
+        {% for i in a %}
+		<tr>
+			<td>{{ i.cake_name }}</td>
+			<td>{{ i.quantity }}</td>
+			<td>{{ i.amount }}</td>
+			<td>{{ i.status }}</td>
+			<td><a href="/payment/payment/{{ i.product_customisation_id }}">Pay</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

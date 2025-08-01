@@ -1,0 +1,45 @@
+{% extends 'temp/merchant_free.html' %}
+{% block base1 %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>normal product</title>
+</head>
+<body>
+	<form method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+		<table>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>Image</td>
+				<td><input type="file" name="img" ></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input type="text" name="Price"></td>
+			</tr>
+			<tr>
+				<td>Quantity</td>
+				<td><input type="text" name="qty"></td>
+			</tr>
+			<tr>
+				<td>Offer</td>
+				<td><input type="text" name="Offer"></td>
+			</tr>
+			<tr>
+				<td>Ingredients</td>
+				<td><textarea name="ingrs" rows="6" cols="21"></textarea></td>
+			</tr>
+		</table>
+
+
+				<center><input type="submit" name="Pstnw" value="Post Now" class="btn btn-outline-primary"></center>
+	</form>
+
+</body>
+</html>
+{% endblock %}

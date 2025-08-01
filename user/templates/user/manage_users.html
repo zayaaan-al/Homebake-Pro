@@ -1,0 +1,38 @@
+{% extends 'temp/admin_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Manage User</h1>
+	<table border="1">
+		<tr>
+			<td>Name</td>
+			<td>Phone number</td>
+			<td>Address</td>
+			<td>Email</td>
+			<td>Location</td>
+			<td>Status</td>
+		</tr>
+        {% for i in j %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.phone_number }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.email }}</td>
+			<td>{{ i.location}}</td>
+			<td>{{ i.status }}</td>
+			<td><a href="/user/approve/{{ i.user_id }}">Accept</a></td>
+			<td><a href="/user/reject/{{ i.user_id }}">Reject</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

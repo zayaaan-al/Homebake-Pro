@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<center>
+	<h1>Product Customisation</h1>
+	<table border="1">
+		<tr>
+			<td>Cake Name</td>
+            <td>Wishes</td>
+			<td>Flavour</td>
+			<td>Layer</td>
+			<td>Shape</td>
+            <td>Weight</td>
+			<td>Quantity</td>
+			<td>Theme</td>
+			<td>Topper</td>
+			<td>Details</td>
+			<td>Image</td>
+		</tr>
+        {% for i in d %}
+		<tr>
+			<td>{{ i.cake_name }}</td>
+			<td>{{ i.wishes }}</td>
+			<td>{{ i.flavour }}</td>
+			<td>{{ i.layer }}</td>
+			<td>{{ i.shape }}</td>
+			<td>{{ i.weight }}</td>
+			<td>{{ i.quantity }}</td>
+			<td>{{ i.theme }}</td>
+			<td>{{ i.topper }}</td>
+            <td>{{ i.details }}</td>
+            <td>{{ i.image }}</td>
+			
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
